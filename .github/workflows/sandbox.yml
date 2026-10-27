@@ -1,0 +1,49 @@
+name: Sandbox checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      outcome:
+        description: 'Synthetic result (failure and cancelled are intentional fixtures)'
+        type: choice
+        options: [success, failure, cancelled]
+        default: success
+permissions:
+  contents: read
+jobs:
+  reference:
+    name: Reference / ${{ matrix.variant }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        variant: [compact, rich]
+    steps:
+      - name: Explain fixture
+        run: echo 'Synthetic OpenGH reference run; no secrets or external services.'
+      - name: Emit annotations and summary
+        run: |
+          echo '::notice title=Sandbox notice::A synthetic informational annotation'
+          echo '::warning title=Sandbox warning::An intentional warning for UI testing'
+          printf '## Sandbox summary\n\n| Variant | Result |\n| --- | --- |\n| ${{ matrix.variant }} | success |\n\n- [x] Reference job completed\n' >> "$GITHUB_STEP_SUMMARY"
+  expected-failure:
+    if: inputs.outcome == 'failure' || startsWith(github.head_ref, 'sandbox/reference-open-')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Intentional failure
+        run: |
+          echo '::error title=Expected sandbox error::This failure is deliberate, not a product regression'
+          exit 1
+  skipped:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'This job is intentionally skipped'
+  cancellation-window:
+    if: inputs.outcome == 'cancelled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Wait for explicit cancellation
+        run: sleep 120

@@ -1,0 +1,1 @@
+Legacy fixture retained until a review PR removes it.
