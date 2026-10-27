@@ -27,6 +27,16 @@ jobs:
           echo '::notice title=Sandbox notice::A synthetic informational annotation'
           echo '::warning title=Sandbox warning::An intentional warning for UI testing'
           printf '## Sandbox summary\n\n| Variant | Result |\n| --- | --- |\n| ${{ matrix.variant }} | success |\n\n- [x] Reference job completed\n' >> "$GITHUB_STEP_SUMMARY"
+      - name: Create downloadable reference artifact
+        run: |
+          mkdir -p "$RUNNER_TEMP/sandbox-artifact"
+          printf '{"synthetic":true,"variant":"%s"}\n' '${{ matrix.variant }}' > "$RUNNER_TEMP/sandbox-artifact/result.json"
+      - name: Upload reference artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sandbox-${{ matrix.variant }}
+          path: ${{ runner.temp }}/sandbox-artifact/
+          retention-days: 7
   expected-failure:
     if: inputs.outcome == 'failure' || startsWith(github.head_ref, 'sandbox/reference-open-')
     runs-on: ubuntu-latest
