@@ -1,13 +1,16 @@
-# OpenGH Markdown showcase
+# OpenGH review and Markdown sandbox
 
-Open this README using the **markdown-enhancements build** to see the changes. Most ordinary paragraphs, links, and code blocks are intentionally unchanged.
+Use this repository to test Markdown rendering, pull-request diffs, and review drafts.
+
+The `examples/review-queue` directory contains deliberately small, dependency-free sample code and data for reviewing.
 
 ## 1. Task lists
 
 Previously these appeared as ordinary bullets. Now completed tasks have a checked, green marker in rich mode; incomplete tasks have an empty, muted marker. Minimal mode keeps the checkboxes but removes the colors.
 
 - [x] Implement Markdown styles
-- [ ] Review the changes
+- [x] Review the Markdown changes
+- [ ] Review the larger multi-file diff
 - [ ] Ship the update
   - [x] Verify nested completed tasks
   - [ ] Verify nested incomplete tasks
@@ -66,6 +69,10 @@ Second line: move the cursor here.
 
 ~~Old wording~~ New wording.
 ```
+
+## Review testing
+
+See [the review walkthrough](docs/review-walkthrough.md) for line, range, and pending-review checks.
 
 ## Unchanged content for comparison
 

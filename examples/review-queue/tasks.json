@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "title": "Improve keyboard navigation",
+    "owner": null,
+    "priority": "high",
+    "status": "open",
+    "labels": [
+      "sandbox",
+      "ui"
+    ],
+    "estimate": 1
+  },
+  {
+    "id": 2,
+    "title": "Keep draft after refresh",
+    "owner": "alice",
+    "priority": "normal",
+    "status": "in_progress",
+    "labels": [
+      "sandbox",
+      "api"
+    ],
+    "estimate": 2
+  },
+  {
+    "id": 3,
+    "title": "Show pending review count",
+    "owner": "bob",
+    "priority": "low",
+    "status": "done",
+    "labels": [
+      "sandbox",
+      "docs"
+    ],
+    "estimate": 3
+  },
+  {
+    "id": 4,
+    "title": "Handle deleted lines",
+    "owner": null,
+    "priority": "high",
+    "status": "open",
+    "labels": [
+      "sandbox",
+      "ui"
+    ],
+    "estimate": 4
+  },
+  {
+    "id": 5,
+    "title": "Handle renamed files",
+    "owner": "alice",
+    "priority": "normal",
+    "status": "in_progress",
+    "labels": [
+      "sandbox",
+      "api"
+    ],
+    "estimate": 5
+  },
+  {
+    "id": 6,
+    "title": "Preserve range selection",
+    "owner": "bob",
+    "priority": "low",
+    "status": "done",
+    "labels": [
+      "sandbox",
+      "docs"
+    ],
+    "estimate": 1
+  },
+  {
+    "id": 7,
+    "title": "Render long code lines",
+    "owner": null,
+    "priority": "high",
+    "status": "open",
+    "labels": [
+      "sandbox",
+      "ui"
+    ],
+    "estimate": 2
+  },
+  {
+    "id": 8,
+    "title": "Display Unicode correctly",
+    "owner": "alice",
+    "priority": "normal",
+    "status": "in_progress",
+    "labels": [
+      "sandbox",
+      "api"
+    ],
+    "estimate": 3
+  },
+  {
+    "id": 9,
+    "title": "Recover from network failure",
+    "owner": "bob",
+    "priority": "low",
+    "status": "done",
+    "labels": [
+      "sandbox",
+      "docs"
+    ],
+    "estimate": 4
+  },
+  {
+    "id": 10,
+    "title": "Verify account identity",
+    "owner": null,
+    "priority": "high",
+    "status": "open",
+    "labels": [
+      "sandbox",
+      "ui"
+    ],
+    "estimate": 5
+  },
+  {
+    "id": 11,
+    "title": "Refresh review activity",
+    "owner": "alice",
+    "priority": "normal",
+    "status": "in_progress",
+    "labels": [
+      "sandbox",
+      "api"
+    ],
+    "estimate": 1
+  },
+  {
+    "id": 12,
+    "title": "Explain unavailable actions",
+    "owner": "bob",
+    "priority": "low",
+    "status": "done",
+    "labels": [
+      "sandbox",
+      "docs"
+    ],
+    "estimate": 2
+  }
+]
