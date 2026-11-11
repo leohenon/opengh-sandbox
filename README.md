@@ -1,4 +1,4 @@
-# OpenGH Markdown showcase
+# Opengh Markdown showcase
 
 Open this README using the **markdown-enhancements build** to see the changes. Most ordinary paragraphs, links, and code blocks are intentionally unchanged.
 
