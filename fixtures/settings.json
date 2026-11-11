@@ -1,5 +1,6 @@
 {
   "name": "sandbox",
-  "enabled": false,
-  "limit": 10
+  "enabled": true,
+  "limit": 25,
+  "mode": "rich"
 }
